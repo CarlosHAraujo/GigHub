@@ -4,7 +4,7 @@
 
 @using (Html.BeginForm("Create", "Gigs"))
 {
-
+    @Html.AntiForgeryToken()
     <div class="form-group">
         @Html.LabelFor(model => model.Venue, new { @class = "control-label" })
         @Html.TextBoxFor(model => model.Venue, new { @class = "form-control" })
