@@ -148,6 +148,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context.cs" />
+    <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -160,11 +161,20 @@
     <Compile Include="Migrations\201703242258597_OverrideConventionsForGigsAndGenres.Designer.cs">
       <DependentUpon>201703242258597_OverrideConventionsForGigsAndGenres.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703242305358_PopulateGenresTable.cs" />
+    <Compile Include="Migrations\201703242305358_PopulateGenresTable.Designer.cs">
+      <DependentUpon>201703242305358_PopulateGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703281836581_AddForeignKeyPropertiesToGig.cs" />
+    <Compile Include="Migrations\201703281836581_AddForeignKeyPropertiesToGig.Designer.cs">
+      <DependentUpon>201703281836581_AddForeignKeyPropertiesToGig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\GigFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\GigHub.Context.mdf" />
@@ -207,6 +217,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Gigs\Create.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -230,6 +241,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703242258597_OverrideConventionsForGigsAndGenres.resx">
       <DependentUpon>201703242258597_OverrideConventionsForGigsAndGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703242305358_PopulateGenresTable.resx">
+      <DependentUpon>201703242305358_PopulateGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703281836581_AddForeignKeyPropertiesToGig.resx">
+      <DependentUpon>201703281836581_AddForeignKeyPropertiesToGig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
