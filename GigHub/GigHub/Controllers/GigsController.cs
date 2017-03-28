@@ -38,6 +38,8 @@ namespace GigHub.Controllers
                 GenreId = model.Genre,
                 Venue = model.Venue
             };
+            _context.Gigs.Add(gig);
+            _context.SaveChanges();
             return RedirectToAction("Index", "Home");
         }
     }
