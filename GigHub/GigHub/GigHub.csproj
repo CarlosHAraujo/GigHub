@@ -147,6 +147,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Attributes\FutureDateAttribute.cs" />
+    <Compile Include="Attributes\ValidTimeAttribute.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
