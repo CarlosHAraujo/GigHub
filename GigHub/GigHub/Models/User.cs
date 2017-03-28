@@ -1,8 +1,9 @@
-﻿namespace GigHub.Models
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+
+namespace GigHub.Models
 {
-    public class User
+    public class User : IdentityUser
     {
-        public int Id { get; set; }
         public string Name { get; set; }
     }
 }
