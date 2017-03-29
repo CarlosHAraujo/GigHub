@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNet.Identity
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -23,17 +25,30 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Add a Gig", "Create", "Gigs")</li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.Name <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Gigs I'm Going</a></li>
-                            <li><a href="#">Artists I'm Following</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Log out</a></li>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    using (Html.BeginForm("Logout", "Login", FormMethod.Post, new { @id = "LogoutForm" }))
+                    {
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.GetUserName() <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Gigs I'm Going</a></li>
+                                    <li><a href="#">Artists I'm Following</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="javascript: document.getElementById('LogoutForm').submit()">Log out</a></li>
+                                </ul>
+                            </li>
                         </ul>
-                    </li>
-                </ul>
+                    }
+                }
+                else
+                {
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("Register", "Register", "Login")</li>
+                        <li>@Html.ActionLink("Login", "Index", "Login")</li>
+                    </ul>
+                }
             </div>
         </div>
     </div>
