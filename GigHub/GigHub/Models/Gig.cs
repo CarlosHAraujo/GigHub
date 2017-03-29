@@ -10,7 +10,7 @@ namespace GigHub.Models
         public User Artist { get; set; }
 
         [Required]
-        public int ArtistId { get; set; }
+        public string ArtistId { get; set; }
 
         public DateTime DateTime { get; set; }
 

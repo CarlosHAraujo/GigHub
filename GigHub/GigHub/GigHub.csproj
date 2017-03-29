@@ -177,6 +177,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Attributes\FutureDateAttribute.cs" />
     <Compile Include="Attributes\ValidTimeAttribute.cs" />
+    <Compile Include="Authentication\ApplicationSignInManager.cs" />
+    <Compile Include="Authentication\ApplicationUserManager.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -192,13 +194,18 @@
     <Compile Include="Migrations\201703282303166_SeedGenresAfterRebase.Designer.cs">
       <DependentUpon>201703282303166_SeedGenresAfterRebase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703291458270_UpdateUserForeignKey.cs" />
+    <Compile Include="Migrations\201703291458270_UpdateUserForeignKey.Designer.cs">
+      <DependentUpon>201703291458270_UpdateUserForeignKey.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Gig.cs" />
-    <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\GigFormViewModel.cs" />
+    <Compile Include="ViewModels\RegisterViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\GigHub.mdf" />
@@ -242,7 +249,8 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Gigs\Create.cshtml" />
-    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -265,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703282303166_SeedGenresAfterRebase.resx">
       <DependentUpon>201703282303166_SeedGenresAfterRebase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703291458270_UpdateUserForeignKey.resx">
+      <DependentUpon>201703291458270_UpdateUserForeignKey.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

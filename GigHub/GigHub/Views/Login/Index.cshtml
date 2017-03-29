@@ -16,6 +16,11 @@
             @Html.LabelFor(model => model.Password, new { @class = "control-label" })
             @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
         </div>
+        <div class="checkbox">
+            <label>
+                @Html.EditorFor(model => model.RememberMe) Remember me
+            </label>
+        </div>
         <input type="submit" value="Login" class="btn btn-primary" />
     </div>
 }

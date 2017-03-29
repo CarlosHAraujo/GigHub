@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace GigHub.Models
+namespace GigHub.ViewModels
 {
     public class LoginViewModel
     {
@@ -10,5 +10,7 @@ namespace GigHub.Models
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+
+        public bool RememberMe { get;  set; }
     }
 }
